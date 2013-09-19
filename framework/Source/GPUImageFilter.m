@@ -510,9 +510,8 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size)
         case kGPUImageRotateLeft: return rotateLeftTextureCoordinates;
         case kGPUImageRotateRight: return rotateRightTextureCoordinates;
         case kGPUImageFlipVertical: return verticalFlipTextureCoordinates;
-        case kGPUImageFlipHorizonal: return horizontalFlipTextureCoordinates;
+        case kGPUImageFlipHorizontal: return horizontalFlipTextureCoordinates;
         case kGPUImageRotateRightFlipVertical: return rotateRightVerticalFlipTextureCoordinates;
-        case kGPUImageRotateRightFlipHorizontal: return rotateRightHorizontalFlipTextureCoordinates;
         case kGPUImageRotate180: return rotate180TextureCoordinates;
     }
 }
@@ -830,7 +829,7 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size)
     switch(rotation)
     {
         case kGPUImageNoRotation: return pointToRotate; break;
-        case kGPUImageFlipHorizonal:
+        case kGPUImageFlipHorizontal:
         {
             rotatedPoint.x = 1.0 - pointToRotate.x;
             rotatedPoint.y = pointToRotate.y;
@@ -854,11 +853,6 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size)
         {
             rotatedPoint.x = pointToRotate.y;
             rotatedPoint.y = pointToRotate.x;
-        }; break;
-        case kGPUImageRotateRightFlipHorizontal:
-        {
-            rotatedPoint.x = 1.0 - pointToRotate.y;
-            rotatedPoint.y = 1.0 - pointToRotate.x;
         }; break;
         case kGPUImageRotate180:
         {

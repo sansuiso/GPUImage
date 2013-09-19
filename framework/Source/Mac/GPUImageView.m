@@ -314,7 +314,7 @@
         case kGPUImageRotateLeft: return rotateLeftTextureCoordinates;
         case kGPUImageRotateRight: return rotateRightTextureCoordinates;
         case kGPUImageFlipVertical: return verticalFlipTextureCoordinates;
-        case kGPUImageFlipHorizonal: return horizontalFlipTextureCoordinates;
+        case kGPUImageFlipHorizontal: return horizontalFlipTextureCoordinates;
         case kGPUImageRotateRightFlipVertical: return rotateRightVerticalFlipTextureCoordinates;
         case kGPUImageRotate180: return rotate180TextureCoordinates;
     }
